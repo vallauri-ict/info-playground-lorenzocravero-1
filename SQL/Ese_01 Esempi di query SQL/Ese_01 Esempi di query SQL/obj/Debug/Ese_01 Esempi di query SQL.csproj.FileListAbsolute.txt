@@ -1,0 +1,7 @@
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\bin\Debug\Ese_01 Esempi di query SQL.exe.config
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\bin\Debug\Ese_01 Esempi di query SQL.exe
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\bin\Debug\Ese_01 Esempi di query SQL.pdb
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\obj\Debug\Ese_01 Esempi di query SQL.csprojAssemblyReference.cache
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\obj\Debug\Ese_01 Esempi di query SQL.csproj.CoreCompileInputs.cache
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\obj\Debug\Ese_01 Esempi di query SQL.exe
+C:\Users\Utente\Desktop\5B INF Desktop\Informatica\SQL\Ese_01 Esempi di query SQL\Ese_01 Esempi di query SQL\obj\Debug\Ese_01 Esempi di query SQL.pdb
