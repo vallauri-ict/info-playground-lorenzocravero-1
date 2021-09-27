@@ -1,2 +1,7 @@
-# Esercizio 1
-*Abbiamo creato un database con comandi SQL e in seguito abbiamo provato ad eseguire delle semplici query*
+### Ese_01: Esempi di semplici query SQL
+*Con i comandi SQL CREATE e INSERT abbiamo creato tre tabelle sulle quali abbiamo poi eseguito alcune semplici query*
+# Comandi utilizzati:
+-CREATE 
+-INSERT
+-SELECT 
+-BETWEEN
