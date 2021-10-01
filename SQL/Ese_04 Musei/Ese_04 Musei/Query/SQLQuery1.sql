@@ -7,13 +7,8 @@ a.Nazionalita='Ita' AND
 a.NomeA=o.NomeA AND m.NomeM=o.NomeM 
 GROUP BY m.NomeM
 
-/* il nome dei musei di londra che non hanno opere di tiziano */
-SELECT m.NomeM
-FROM Musei m, Opere o, Artisti a
-WHERE m.NomeM = 'Londra'
-AND 
 
-/* stessa query in maniera diversa */
+/* nome di tutti i musei di Londra che non conservano opere di tiziano */
 SELECT m.NomeM
 FROM Musei m
 WHERE m.Citta = 'Londra'
