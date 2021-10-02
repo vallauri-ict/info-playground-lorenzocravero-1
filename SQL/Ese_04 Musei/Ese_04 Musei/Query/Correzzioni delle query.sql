@@ -1,10 +1,15 @@
-﻿/* il nome dei musei che non conservano opere di tiziano */
+﻿/* il nome dell'artista e il titolo dell'opera conservatati agli uffizi */
+SELECT o.NomeA, o.Titolo
+FROM Opere o
+WHERE o.NomeM = 'Uffizi'
+
+/* il nome dei musei che non conservano opere di tiziano */
 SELECT *
 FROM Musei m
 WHERE m.Citta = 'Londra'
 AND 'Tiziano' NOT IN (SELECT o.NomeA
 					  FROM Opere o 
-					  WHERE o.NomeM = m.NomeM)
+					  WHERE o.NomeM = m.NomeM) 
 
 /* il nome dei musei che conservano solo opere di tiziano */
 SELECT *
