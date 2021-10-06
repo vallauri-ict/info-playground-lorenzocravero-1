@@ -2,7 +2,7 @@
 # *Studente Lorenzo Cravero*
 # Classe 5B INF </br>
 Troverete esercizi su:  </br>
--SQL
+ - *SQL*
 
 *Per clonare il repository:*
 - copiare questo link
