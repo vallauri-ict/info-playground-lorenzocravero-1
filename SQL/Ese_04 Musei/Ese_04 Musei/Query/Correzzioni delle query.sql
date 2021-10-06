@@ -1,46 +1,36 @@
-﻿/* il nome dell'artista e il titolo dell'opera conservatati agli uffizi */
-SELECT o.NomeA, o.Titolo
-FROM Opere o
-WHERE o.NomeM = 'Uffizi'
+﻿/* query per esercitarsi */
 
-/* il nome dei musei che non conservano opere di tiziano */
-SELECT *
-FROM Musei m
-WHERE m.Citta = 'Londra'
-AND 'Tiziano' NOT IN (SELECT o.NomeA
-					  FROM Opere o 
-					  WHERE o.NomeM = m.NomeM) 
+/* titolo e codice delle opere di tiziano al national gallery */
+select o.Codice, o.Titolo
+from Opere o
+where o.NomeA = 'Tiziano' and o.NomeM='National Gallery'
 
-/* il nome dei musei che conservano solo opere di tiziano */
-SELECT *
-FROM Musei m
-WHERE m.Citta = 'Londra'
-AND NOT EXISTS ( SELECT * 
-				FROM Opere o
-				WHERE o.NomeA <> 'Tiziano'
-				AND o.NomeM = m.NomeM)
+/* nome artista e titolo opere che si trovano o agli uffizi o alla national gallery */
+select o.NomeA, o.Titolo
+from Opere o 
+where o.NomeM = 'Uffizi' or o.NomeM = 'National gallery'
 
-/* per ciascun artista il nome dell'artista e il nome delle sue opere conservate agli uffizi */
-SELECT o.NomeA, COUNT(*) as nOpere
-FROM Opere o
-WHERE o.NomeM = 'Uffizi'
-GROUP BY o.NomeA
+/* nome artista e titolo opere conservate nei musei di firenze */
+select o.NomeA, o.Titolo
+from Opere o, Musei m
+where m.Citta = 'Firenze' and m.NomeM = o.NomeM
 
-/* titolo dell'opere e nome artista delle opere italiane senza personaggio */
-SELECT o.NomeA, o.Titolo
-FROM Opere o
-WHERE NOT EXISTS(SELECT *
-				FROM Artisti a, Personaggi p
-				WHERE a.Nazionalita = 'Ita' AND o.Codice NOT IN(p.Codice))
+/* città in cui sono conservate le opere di picasso */
+select m.Citta
+from Opere o, Musei m
+where o.NomeA = 'Picasso' and o.NomeM = m.NomeM
 
+/* codice e titolo delle opere di tiziano conservate nei musei di londra */
+select o.Codice, o.Titolo
+from Opere o, Musei m
+where o.NomeA = 'Tiziano' and o.NomeM = m.NomeM and m.Citta = 'Londra'
 
-/* 14- Il nome dei musei di Londra che non conservano opere di artisti italiani, eccettuato Tiziano */
-SELECT o.Titolo, o.NomeA, o.NomeM
-FROM Opere o, Musei m
-WHERE o.NomeM=m.NomeM
-AND m.Citta='Londra'
-AND NOT EXISTS(SELECT *
-			FROM Artisti a
-			WHERE a.NomeA=o.NomeA
-			AND a.NomeA <>'Tiziano' 
-			AND a.Nazionalita='Ita')
+/* il nome degli artisti spagnoli e il titolo delle loro opere conservate a firenze */
+select o.NomeA, o.Titolo
+from Opere o, Musei m, Artisti a
+where m.Citta = 'Firenze' and m.NomeM = o.NomeM and o.NomeA = a.NomeA and a.Nazionalita = 'Spa'
+
+/* codice e titolo delle opere di artisti italiani conservate a londra e in cui c'è la madonna */
+select o.Codice, o.Titolo
+from Opere o, Musei m, Artisti a, Personaggi p
+where p.Personaggio = 'Madonna' and p.Codice = o.Codice and o.NomeM = m.NomeM and o.NomeA = a.NomeA and m.Citta = 'Londra' and exists (select * from Artisti a where a.Nazionalita = 'Ita')
