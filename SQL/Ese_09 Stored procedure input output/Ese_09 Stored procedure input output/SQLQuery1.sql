@@ -1,0 +1,1 @@
+﻿insert into Studenti values ('Lorenzo','Cravero',18,'3901729336','5B'),('Lorenzo','Cravero',18,'3901729336','5B'),('Edoardo','Ababei',18,'3134578396','5A'),('Ivan','Angjelovski',19,'3812789932','5C'),('Michele','Ghisolfi',17,'3611426329','5D')
